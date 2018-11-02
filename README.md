@@ -1,9 +1,9 @@
 # DBRep
 
-DBRep is replication tool for Oracle Database Standart Edition.
+DBRep is a replication tool for Oracle Database Standard Edition.
 If you don't need any Oracle EE options but still need DataGuard for make a standby database then DBRep will help you.
 
-![DBRep Overview](https://octodex.github.com/dbrep/overview.jpg)
+![DBRep Overview](https://github.com/Maxfer4Maxfer/dbrep/overview.jpg)
 
 * Replication for Oracle Standard Edition
 * Replication is run be a dbrep.sh script via a crontab schedule
@@ -11,12 +11,12 @@ If you don't need any Oracle EE options but still need DataGuard for make a stan
 
 DBRep set of couple scripts written on **bash** and **PL/SQL**. Thus DBRep can be easy modified and you can adjust it for you.
 
-I was developed DBRep inpired by one of these [approuche](http://www.dba-oracle.com/oracle_tips_failover.htm)
+I was developed DBRep inspired by one of these [approach](http://www.dba-oracle.com/oracle_tips_failover.htm)
 
 ## Processes on the Primary database
 * dbrep.sh script is excepted each 10 minutes be a crontab schedule
 * dbrep.sh script determines there is primary or standby database
-* Run a rsync synchronization process of a /orafra/<SID>/archivelog folder
+* Run a rsync synchronisation process of a /orafra/<SID>/archivelog folder
 * Logs to a /var/log/dbrep/dbrep.log file
 
 ## Processes on the Standby database
@@ -35,7 +35,7 @@ You will need **rsync** and **git**
 yum install -y rsync git
 ```
 
-Prepere a directory for logs and set up logrotate
+Prepare a directory for logs and set up logrotated
 
 ```bash
 mkdir var/log/dbrep/
@@ -148,7 +148,7 @@ crontab -e
 
 
 
-##	FAILOVER TO STANDBY
+## FAILOVER TO STANDBY
 These commands should execute on Standby.
 After you do this you will never get back easely.
 Only the backup/resote procedure helps you reestablish replication.
