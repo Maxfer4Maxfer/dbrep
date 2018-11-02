@@ -3,7 +3,7 @@
 DBRep is a replication tool for Oracle Database Standard Edition.
 If you don't need any Oracle EE options but still need DataGuard for make a standby database then DBRep will help you.
 
-![DBRep Overview](https://github.com/Maxfer4Maxfer/dbrep/overview.jpg)
+![DBRep Overview](https://github.com/Maxfer4Maxfer/dbrep/blob/master/overview.jpg)
 
 * Replication for Oracle Standard Edition
 * Replication is run be a dbrep.sh script via a crontab schedule
@@ -65,10 +65,10 @@ BOTH: Set up initial variables
 ```bash
 vi dbrep.sh
 	. ~/.bash_profile
-	ORACLE_SID=ORACLESID						 #ORACLE SID
-	NEIGHBOR=standby_server_name				 #Standby Server
-	ARCH_DIR=/orafra/ORACLESID/archivelog		#Directory with archive logs
-	SETUP_DIR=/home/oracle/dbrep			 	#Directory with dbrep
+	ORACLE_SID=ORACLESID #ORACLE SID
+	NEIGHBOR=standby_server_name	#Standby Server
+	ARCH_DIR=/orafra/ORACLESID/archivelog 	#Directory with archive logs
+	SETUP_DIR=/home/oracle/dbrep	#Directory with dbrep
 ```
 
 PRIMARY: Setup a file management policy for apply archived logs on a Standby database. Should be performed on a Primary database.
@@ -219,3 +219,8 @@ Delete old archive logs
 ```bash
 echo " delete noprompt archivelog all completed before 'sysdate-1'; " | rman target /
 ```
+
+## Donations
+
+ If you want to support this project, please consider donating:
+ * PayPal: https://paypal.me/MaxFe
